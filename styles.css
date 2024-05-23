@@ -87,3 +87,63 @@ header a::after {
     border-radius: 50%; /* Hacer la imagen circular */
     z-index: 1; /* Colocar la imagen sobre el texto del encabezado */
 }
+
+.window-notice {
+    background: rgba(33, 41, 52, .85);
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    display: flex;
+    position: fixed;
+    z-index: 999;
+}
+.window-notice {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ajusta según necesites */
+}
+
+.content {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+}
+
+.content-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.content-text {
+    margin-bottom: 20px;
+}
+
+.content-buttons {
+    margin-top: 20px;
+}
+#close-button {
+    background-color: #ff0000; /* Color de fondo rojo */
+    color: #fff; /* Color del texto blanco */
+    border: none;
+    padding: 10px 20px; /* Relleno interno */
+    font-size: 16px; /* Tamaño de la fuente */
+    font-weight: bold; /* Texto en negrita */
+    border-radius: 5px; /* Esquinas redondeadas */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Transiciones suaves */
+}
+
+#close-button:hover {
+    background-color: #8b00ff; /* Color de fondo morado al pasar el ratón */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Sombra al pasar el ratón */
+}
+
+#close-button:active {
+    background-color: #6600cc; /* Color de fondo morado oscuro al hacer clic */
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2); /* Sombra más pequeña al hacer clic */
+}

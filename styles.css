@@ -1,0 +1,89 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('Images/Fondo.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+
+
+/* Estilos para el texto dentro del encabezado */
+header h1 {
+    color: white; /* Color blanco para el texto */
+}
+
+/* Estilos para las imágenes */
+.contenedor-imagen {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.columna {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: -20px; /* Ajusta el margen lateral */
+    margin-left: -20px; /* Ajusta el margen lateral */
+}
+
+.imagen {
+    margin-bottom: 10px;
+}
+
+.imagen img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Personalización del tamaño de cada imagen */
+.imagen:nth-child(1) img {
+    width: 500px;
+}
+
+.imagen:nth-child(2) img {
+    width: 350px;
+}
+
+.imagen:nth-child(3) img {
+    width: 450px;
+}
+
+
+/* Efecto de zoom al pasar el cursor sobre la imagen */
+.imagen img:hover {
+    transform: scale(1.1);
+}
+
+/* Estilos para el encabezado */
+header {
+    color: white; /* Texto blanco */
+    padding: 20px;
+    text-align: center; /* Alineación centrada del texto */
+    position: relative; /* Posición relativa para alinear la imagen */
+    height: 100px; /* Altura del encabezado */
+}
+
+/* Estilo para la imagen en el centro del encabezado */
+header a {
+    display: block; /* Convertir en un bloque para que ocupe todo el espacio del encabezado */
+}
+
+header a::after {
+    content: ""; /* Contenido vacío */
+    background-image: url('images/Juegos.png');/* Ruta de la imagen */
+    background-size: contain; /* Ajustar tamaño para contener la imagen */
+    background-position: center; /* Centrar la imagen */
+    background-repeat: no-repeat; /* No repetir la imagen */
+    position: absolute; /* Posición absoluta para superponer la imagen */
+    top: 50%; /* Alinear la parte superior de la imagen al 50% del encabezado */
+    left: 50%; /* Alinear la parte izquierda de la imagen al 50% del encabezado */
+    transform: translate(-50%, -50%); /* Desplazar la imagen hacia arriba y hacia la izquierda en un 50% de su propio tamaño */
+    width: 350px; /* Ancho de la imagen */
+    height: 350px; /* Altura de la imagen */
+    border-radius: 50%; /* Hacer la imagen circular */
+    z-index: 1; /* Colocar la imagen sobre el texto del encabezado */
+}

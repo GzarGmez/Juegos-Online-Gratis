@@ -2,10 +2,11 @@
 body {
     margin: 0;
     padding: 0;
+    background-color: #f0f0f0;
     background-image: url('Images/Fondo.png');
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -14,108 +15,12 @@ body {
     color: rgb(0, 0, 0);
 }
 
-#gameArea {
-    position: relative;
-    width: 600px;
-    height: 600px;
-    border: 2px solid white;
-    overflow: hidden;
-    background-color: black;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: flex-end;
-    padding: 10px; /* Espacio para el contador */
-}
-
-#player {
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    background-color: red;
-}
-
-#startScreen {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.8);
-    font-size: 24px;
-    color: white;
-}
-
-#enemyCounter {
-    position: absolute;
-    bottom: 10px; /* Ajuste de la posición vertical */
-    right: 10px; /* Ajuste de la posición horizontal */
-    color: white;
-    font-size: 16px;
-}
-
-
-/* Estilos para el texto dentro del encabezado */
-header h1 {
-    color: white; /* Color blanco para el texto */
-}
-
-/* Estilos para las imágenes */
-.contenedor-imagen {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 10px;
-}
-
-.columna {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-right: -20px; /* Ajusta el margen lateral */
-    margin-left: -20px; /* Ajusta el margen lateral */
-}
-
-.imagen {
-    margin-bottom: 10px;
-}
-
-.imagen img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Personalización del tamaño de cada imagen */
-.imagen:nth-child(1) img {
-    width: 500px;
-}
-
-.imagen:nth-child(2) img {
-    width: 350px;
-}
-
-.imagen:nth-child(3) img {
-    width: 450px;
-}
-
-
-/* Efecto de zoom al pasar el cursor sobre la imagen */
-.imagen img:hover {
-    transform: scale(1.1);
-}
-
-/* Estilos para el encabezado */
 header {
-    color: white; /* Texto blanco */
+    color: rgb(0, 0, 0); /* Texto blanco */
     padding: 20px;
     text-align: center; /* Alineación centrada del texto */
     position: relative; /* Posición relativa para alinear la imagen */
     height: 100px; /* Altura del encabezado */
-}
-
-/* Estilo para la imagen en el centro del encabezado */
-header a {
-    display: block; /* Convertir en un bloque para que ocupe todo el espacio del encabezado */
 }
 
 header a::after {
@@ -134,6 +39,55 @@ header a::after {
     z-index: 1; /* Colocar la imagen sobre el texto del encabezado */
 }
 
+.container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px; /* Espacio entre el encabezado y el juego */
+}
+
+.choices {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.choices > div {
+    margin: 0 10px;
+}
+
+button {
+    background-color: #000; /* Color de fondo negro */
+    color: #fff; /* Color del texto blanco */
+    border: none;
+    padding: 10px 20px; /* Relleno interno */
+    font-size: 16px; /* Tamaño de la fuente */
+    font-weight: bold; /* Texto en negrita */
+    border-radius: 5px; /* Esquinas redondeadas */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Transiciones suaves */
+}
+
+button:hover {
+    background-color: #ff0000; /* Color de fondo rojo al pasar el ratón */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Sombra al pasar el ratón */
+}
+
+
+#result {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+p#message {
+    font-size: 18px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
 .window-notice {
     background: rgba(33, 41, 52, .85);
     left: 0;
@@ -144,6 +98,7 @@ header a::after {
     position: fixed;
     z-index: 999;
 }
+
 .window-notice {
     display: flex;
     justify-content: center;
@@ -172,6 +127,7 @@ header a::after {
 .content-buttons {
     margin-top: 20px;
 }
+
 #close-button {
     background-color: #ff0000; /* Color de fondo rojo */
     color: #fff; /* Color del texto blanco */
@@ -192,4 +148,10 @@ header a::after {
 #close-button:active {
     background-color: #6600cc; /* Color de fondo morado oscuro al hacer clic */
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2); /* Sombra más pequeña al hacer clic */
+}
+
+.choice-image {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
 }
